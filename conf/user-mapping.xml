@@ -1,0 +1,35 @@
+<user-mapping>
+	
+    <!-- Per-user authentication and config information -->
+    <authorize username="username" password="password">
+	<connection name="localhost">
+            <protocol>ssh</protocol>
+            <param name="hostname">localhost</param>
+            <param name="port">22</param>
+	    <param name="username">allen</param>
+            <param name="password">intel_123</param>
+        </connection>
+
+        <!-- Second authorized connection -->
+	<connection name="otherhost">
+            <protocol>ssh</protocol>
+            <param name="hostname">192.168.1.168</param>
+            <param name="port">22</param>
+	    <param name="username">root</param>
+            <param name="password">intel123</param>
+        </connection>
+    	<connection name="auto18 vnc">
+            <protocol>vnc</protocol>
+            <param name="hostname">192.168.1.168</param>
+            <param name="port">5900</param>
+            <param name="password">intel123</param>
+        </connection>
+		
+	<connection name="auto20">
+	    <protocol>rdp</protocol>
+	    <param name="hostname">10.239.98.50</param>
+	    <param name="port">3389</param>
+	</connection>
+     </authorize>
+
+</user-mapping>
